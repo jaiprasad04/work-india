@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import {Routes, Navigate, Route} from 'react-router-dom'
+
+import Account from './components/Account'
+import Popular from './components/Popular'
+import TopRated from './components/TopRated'
+import Upcoming from './components/Upcoming'
+import SingleMovieDetails from './components/SingleMovieDetails'
+import SearchMovies from './components/SearchMovies'
+import NotFound from './components/NotFound'
+
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path="/account" element={<Account />} />
+      <Route path="/" element={<Popular />} />
+      <Route path="/top-rated" element={<TopRated />} />
+      <Route path="/upcoming" element={<Upcoming />} />
+      <Route path="/search" element={<SearchMovies />} />
+      <Route path="/movie/:id" element={<SingleMovieDetails />} />
+      <Route path="/not-found" element={<NotFound />} />
+      <Route path="*" element={<Navigate to="/not-found" />} />
+    </Routes>
+  )
 }
-
 export default App;

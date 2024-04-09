@@ -1,0 +1,66 @@
+.sidebar-movies-container {
+  display: flex;
+}
+
+.home-container {
+  background-color: #252121;
+  /* background-image: url('https://res.cloudinary.com/dkwwcq9yc/image/upload/v1707056623/exploding-multi-colored-flame-creates-abstract-futuristic-design-generated-by-ai_hiuurg.jpg');
+  background-size: contain; */
+  height: 100vh;
+  width: 100%;
+  padding-top: 36px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    padding-top: 96px;
+  }
+}
+
+.movie-item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-item-list {
+  padding-left: 0;
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-number {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 18px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.pagination-button {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.loader-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
